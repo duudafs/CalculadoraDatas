@@ -1,0 +1,19 @@
+.card {
+  width: 500px;
+  height: 400px;
+}
+
+input[type=number]{
+  width: 150px;
+  text-align: center;
+margin-left: 5px;
+background-color: rgb(192, 221, 204);
+
+}
+
+input[type=date]{
+width: 330px;
+margin-top: 5px;
+text-align: center;
+background-color: rgb(170, 197, 179);
+}

@@ -11,8 +11,6 @@
  border-radius: 15px;
 }
 
-
-
 .card-2 input[type=date] {
   width: 330px;
   margin-top: 3px;
@@ -23,5 +21,4 @@
 #roxo {
   background-color: rgb(226, 207, 219);
   width: 150px;
-
 }

@@ -5,6 +5,7 @@ export default function CardCalendario() {
   const [data2, setData2] = useState(''); 
   const [data3, setData3] = useState(['', '', '', '', '', '']); 
   const [resultados, setResultados] = useState([null, null, null, null, null, null]);
+ 
 
   const atualizarData2 = (index, valor) => {
     const novasDatas = [...data3];
@@ -15,7 +16,7 @@ export default function CardCalendario() {
       const dataBase = new Date(data2);
       const dataLinha = new Date(valor);
 
-      
+  
       const dias =
         Math.floor((dataLinha.getTime() - dataBase.getTime()) / (1000 * 60 * 60 * 24));
 

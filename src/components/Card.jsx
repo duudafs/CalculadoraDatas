@@ -2,7 +2,6 @@
 import React, { useState } from 'react';
 import './Card.css';
 
-
 export default function Card() {
   const [data, setData] = useState('');
   const [dias, setDias] = useState([0, 0, 0, 0, 0, 0]);
@@ -14,13 +13,15 @@ export default function Card() {
     setDias(novoDias);
 
     if (data) {
-      const dataObj = new Date(data);
-      dataObj.setDate(dataObj.getDate() + Number(valor));
-      const novaData = dataObj.toISOString().split('T')[0];
-      const novosResultados = [...resultados];
-      novosResultados[index] = novaData;
-      setResultados(novosResultados);
-    } 
+     const [ano, mes, dia] = data.split('-');
+    const dataObj = new Date(ano, mes - 1, dia);
+    dataObj.setDate(dataObj.getDate() + Number(valor));
+
+    const novaData = dataObj.toLocaleDateString('pt-BR'); // DD/MM/YYYY
+    const novosResultados = [...resultados];
+    novosResultados[index] = novaData;
+    setResultados(novosResultados);
+  }
   };
 
   return (
@@ -57,6 +58,3 @@ export default function Card() {
     </div>
   );
 }
-
-
-
